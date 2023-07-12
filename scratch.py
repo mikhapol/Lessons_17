@@ -1,7 +1,7 @@
 import psycopg2
 import os
 
-POSTGRES_API_KEY = os.getenv('POSTGRES_API_KEY')
+POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
 
 # connect to bd
 
@@ -9,7 +9,7 @@ conn = psycopg2.connect(
     host="localhost",
     database="test",
     user="postgres",
-    password=POSTGRES_API_KEY
+    password=POSTGRES_PASSWORD
 )
 
 # create cursor
